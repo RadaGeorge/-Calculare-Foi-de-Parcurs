@@ -1,0 +1,549 @@
+
+
+
+
+
+
+#include<stdio.h>
+
+void ajutor();
+
+int introducere_alimentari(int alm);
+
+int introducere_timp(int timp);
+
+int introducere_kmD1(int kmD1);
+
+int introducere_kmD2(int kmD2);
+
+int introducere_kmD3(int kmD3);
+
+int introducere_kmD4(int kmD4);
+
+int introducere_kmW1(int kmW1);
+
+int introducere_kmW2(int kmW2);
+
+int introducere_kmU1(int kmU1);
+
+int introducere_kmU2(int kmU2);
+
+int introducere_kmU3(int kmU3);
+
+float date_speciale1();
+
+void sub_meniu();
+
+// int calcul_km(kmD1, kmD2, kmD3, kmOras, kmBuc);
+
+ float coD1 = 1.0;
+
+ float coD2 = 1.2;
+
+ float coD3 = 1.4;
+
+ float coD4 = 1.6;
+
+ float coW1 = 1.2;
+
+ float coW2 = 1.3;
+
+ float coU1 = 1.52;
+
+ float coU2 = 1.25;
+
+ float coU3 = 1.15; 
+
+ float coT  = 0.25;
+
+int main(void)
+{
+	int kmD1 = 0;
+
+	int kmD2 = 0;
+
+	int kmD3 = 0;
+
+	int kmD4 = 0;
+
+	int kmW1 = 0;
+
+	int kmW2 = 0;
+
+	int kmU1 = 0;
+
+	int kmU2 = 0;
+
+	int kmU3 = 0;
+
+	int timp = 0;
+
+	int kmD1T = 0;
+
+	int kmD2T = 0;
+
+	int kmD3T = 0;
+
+	int kmD4T = 0;
+
+	int kmW1T = 0;
+
+	int kmW2T = 0;
+
+	int kmU1T = 0;
+
+	int kmU2T = 0;
+
+	int kmU3T = 0;
+
+	int timpT = 0;
+	
+
+	int kmReali = 0;
+
+	int kmEf = 0;
+
+	float consum100km = 0; // Cm1 consum mediu la 100km
+
+	float coS1 = 0;
+
+	float coS2 = 0;
+
+	char tipDrum;
+
+	int alm = 0;
+
+	ajutor();
+
+	printf("  \r\nIntrodu consumul la 100km ex. 7.6 : ");
+	scanf(" %f", &consum100km);
+
+	alm = introducere_alimentari(alm);
+
+	timp = introducere_timp(timp);
+	   timpT = timp;
+
+	kmD1 = introducere_kmD1(0);
+	         kmD1T = kmD1;
+         printf("   \r\nKmD1 =  %d km\r\n", kmD1);
+
+	kmD2 = introducere_kmD2(0);
+	         kmD2T = kmD2;
+         printf("   \r\nKmD2 =  %d km\r\n", kmD2);
+
+	kmD3 = introducere_kmD3(0);
+             kmD3T = kmD3;
+	     printf("   \r\nKmD3 =  %d km\r\n", kmD3);
+
+	kmD4 = introducere_kmD4(0);
+             kmD4T = kmD4;
+	     printf("   \r\nKmD4 =  %d km\r\n", kmD4);
+
+	kmW1 = introducere_kmW1(0);
+             kmW1T = kmW1;
+	     printf("   \r\nKmW1 =  %d km\r\n", kmW1);
+
+	kmW2 = introducere_kmW2(0);
+             kmW2T = kmW2;
+	     printf("   \r\nKmW2 =  %d km\r\n", kmW2);
+
+	kmU1 = introducere_kmU1(0);
+             kmU1T = kmU1;
+	     printf("   \r\nKmU1 =  %d km\r\n", kmU1);
+
+	kmU2 = introducere_kmU2(0);
+             kmU2T = kmU2;
+	     printf("   \r\nKmU2 =  %d km\r\n", kmU2);
+
+    kmU3 = introducere_kmU3(0);
+             kmU3T = kmU3;
+	     printf("   \r\nKmU3 =  %d km\r\n", kmU3);
+
+		coS1 = date_speciale1();
+
+         printf("coS1 : %.2f\r\n",coS1 );
+
+ if	(coS1 > 0)
+   {       
+	 
+          sub_meniu(); 
+	 do
+	    {
+		  scanf("  %c", &tipDrum);
+		       switch (tipDrum)
+		     {
+		       case 'A':
+			        coD1 = coS1 * coD1;
+			       printf("\r\n Ai ales %c ", tipDrum);
+			          break;
+		       case 'B':
+			        coD2 = coS1 * coD2;
+			       printf("\r\n Ai ales %c ", tipDrum);
+			          break;
+		       case 'C':
+			        coD3 = coS1 * coD3;
+			       printf("\r\n Ai ales %c ", tipDrum);
+			          break;
+			   case 'D':
+			        coD4 = coS1 * coD4;
+			       printf("\r\n Ai ales %c ", tipDrum);
+			          break;
+			   case 'E':
+			        coW1 = coS1 * coW1;
+			       printf("\r\n Ai ales %c ", tipDrum);
+			          break;
+			   case 'F':
+			        coW2 = coS1 * coW2;
+			       printf("\r\n Ai ales %c ", tipDrum);
+			          break;
+			   case 'G':
+			        coU3 = coS1 * coU3;
+			       printf("\r\n Ai ales %c ", tipDrum);
+			          break;
+			                                    
+		       case 'H':
+			        coU1 = coS1 * coU1;
+			       printf("\r\nAi ales %c ", tipDrum);
+			          break;
+		       case 'I':
+			        coU2 = coS1 * coU2;
+			       printf("\r\n Ai ales %c ", tipDrum);
+			          break;
+		       case 'T':
+			        coD1 = coS1 * coD1;
+			        coD2 = coS1 * coD2;
+			        coD3 = coS1 * coD3;
+			        coD4 = coS1 * coD4;
+			        coW1 = coS1 * coW1;
+			        coW2 = coS1 * coW2;
+			        coU1 = coS1 * coU1;
+			        coU2 = coS1 * coU2;
+			        coU3 = coS1 * coU3;
+			       printf("\r\nAi ales %c \r\n ", tipDrum);
+			          break;
+			// default : printf(" Acesta comanda ");
+		}
+	}while (tipDrum != 'X');
+ } 
+
+   coS2 = date_speciale1();
+    printf(" coS2  %f\r\n",coS2 );
+
+if (coS2 > 0 )
+   {
+	  sub_meniu();
+     do
+	   {
+		  scanf("  %c", &tipDrum);
+     switch (tipDrum)
+		    {
+		       case 'A':
+			        coD1 = coS2 * coD1;
+			       printf("\r\n Ai ales %c ", tipDrum);
+			          break;
+		       case 'B':
+			        coD2 = coS2 * coD2;
+			       printf("\r\n Ai ales %c ", tipDrum);
+			          break;
+		       case 'C':
+			        coD3 = coS2 * coD3;
+			       printf("\r\n Ai ales %c ", tipDrum);
+			          break;
+			   case 'D':
+			        coD4 = coS2 * coD4;
+			       printf("\r\n Ai ales %c ", tipDrum);
+			          break;
+			   case 'E':
+			        coW1 = coS2 * coW1;
+			       printf("\r\n Ai ales %c ", tipDrum);
+			          break;
+			   case 'F':
+			        coW2 = coS2 * coW2;
+			       printf("\r\n Ai ales %c ", tipDrum);
+			          break;
+			   case 'G':
+			        coU3 = coS2 * coU3;
+			       printf("\r\n Ai ales %c ", tipDrum);
+			          break;
+			                                    
+		       case 'H':
+			        coU1 = coS2 * coU1;
+			       printf("\r\nAi ales %c ", tipDrum);
+			          break;
+		       case 'I':
+			        coU2 = coS2 * coU2;
+			       printf("\r\n Ai ales %c ", tipDrum);
+			          break;
+		       case 'T':
+			        coD1 = coS2 * coD1;
+			        coD2 = coS2 * coD2;
+			        coD3 = coS2 * coD3;
+			        coD4 = coS2 * coD4;
+			        coW1 = coS2 * coW1;
+			        coW2 = coS2 * coW2;
+			        coU1 = coS2 * coU1;
+			        coU2 = coS2 * coU2;
+			        coU3 = coS2 * coU3;
+			       printf(" Ai ales %c ", tipDrum);
+			          break;
+			// default : printf(" Acesta comanda ");
+		}
+	}while (tipDrum != 'X');
+  }
+             ////  Calcul drept de consum 
+
+
+   kmReali = kmD1+kmD2+kmD3+kmD4+kmW1+kmW2+kmU1+kmU2+kmU3;
+
+			        timp = coT * timp;
+
+                    kmD1 = kmD1 * coD1;
+			        kmD2 = kmD2 * coD2;
+			        kmD3 = kmD3 * coD3;
+			        kmD4 = kmD4 * coD4;
+			        kmW1 = kmW1 * coW1;
+			        kmW2 = kmW2 * coW2;
+			        kmU1 = kmU1 * coU1;
+			        kmU2 = kmU2 * coU2;
+			        kmU3 = kmU3 * coU3;
+
+    kmEf = kmD1+kmD2+kmD3+kmD4+kmW1+kmW2+kmU1+kmU2+kmU3+timp;
+                
+                consum100km = consum100km * kmEf / 100;
+
+
+                     printf("\r\n\r\n\r\n                            REZULTAT :         ");
+
+                float diferentaC = consum100km - alm;
+
+         if(consum100km > alm){
+         	printf("\r\n\r\n\r\n                  ECONOMIE : %.2f ",diferentaC);
+         	
+          }       
+          else if(consum100km == alm){
+          	printf("\r\n\r\n                         INCADRARE IN CONSUM");
+          	
+          }
+          else{printf("\r\n\r\n                 CONSUM PESTE NORMA : %.2f",diferentaC);}
+
+          printf("\r\n\r\n                        Total de alimentat : %.2f", consum100km);
+          printf("\r\n\r\n                         Alimentati : %d", alm);
+
+      printf("\r\n\r\n       Km Echivalati : %d                 Km Reali : %d",kmEf, kmReali);
+
+      printf("\r\n\r\n       Timp/Km : %d/%d",timpT, timp);
+
+      printf("\r\n\r\n\t TotalKmD1 Introdusi : %d\tTotalKmD1 Echivalati : %d", kmD1T, kmD1);
+       printf("\r\n\r\n\t TotalKmD2 Introdusi : %d\tTotalKmD2 Echivalati : %d", kmD2T, kmD2);
+        printf("\r\n\r\n\t TotalKmD3 Introdusi : %d\tTotalKmD3 Echivalati : %d", kmD3T, kmD3);
+         printf("\r\n\r\n\t TotalKmD4 Introdusi : %d\tTotalKmD4 Echivalati : %d", kmD4T, kmD4); 
+          printf("\r\n\r\n\t TotalKmW1 Introdusi : %d\tTotalKmW1 Echivalati : %d", kmW1T, kmW1);
+           printf("\r\n\r\n\t TotalKmW2 Introdusi : %d\tTotalKmW2 Echivalati : %d", kmW2T, kmW2);
+            printf("\r\n\r\n\t TotalKmU1 Introdusi : %d\tTotalKmU1 Echivalati : %d", kmU1T, kmU1);
+             printf("\r\n\r\n\t TotalKmU2 Introdusi : %d\tTotalKmU2 Echivalati : %d", kmU2T, kmU2);
+              printf("\r\n\r\n\t TotalKmU3 Introdusi : %d\tTotalKmU3 Echivalati : %d", kmU3T, kmU3);
+
+
+
+
+	  return 0; 
+}
+
+void ajutor()
+{
+	printf("\r\n\r\n        CLCULATOR FOII DE PARCURS\r\n\r\n");
+}
+
+int introducere_timp(int timp)
+
+{
+     int timpI;
+do
+	{
+		printf
+			("  \r\nPentru a merge mai departe intodu 0.  \r\n\r\n Introdu km in categoria Timp :");
+		scanf(" %d", &timpI);
+		timp = timpI + timp;
+	}
+	while (timpI != 0);
+	return timp;
+}
+
+
+int introducere_kmD1(int kmD1)
+{
+
+	int kmI;
+
+	do
+	{
+		printf
+			("  \r\nPentru a merge mai departe intodu 0.  \r\n\r\n Introdu km in categoria D1 :");
+		scanf(" %d", &kmI);
+		kmD1 = kmI + kmD1;
+	}
+	while (kmI != 0);
+	return kmD1;
+}
+
+int introducere_kmD2(int kmD2)
+{
+	int kmI;
+	do
+	{
+		printf
+			("  \r\nPentru a merge mai departe intodu 0.  \r\n\r\n Introdu km in categoria D2 :");
+		scanf(" %d", &kmI);
+		kmD2 = kmI + kmD2;
+	}
+	while (kmI != 0);
+	return kmD2;
+}
+
+int introducere_kmD3(int kmD3)
+{
+	int kmI;
+	do
+	{
+		printf
+			("  \r\nPentru a merge mai departe intodu 0.  \r\n\r\n Introdu km in categoria D3 :");
+		scanf(" %d", &kmI);
+		kmD3 = kmI + kmD3;
+	}
+	while (kmI != 0);
+	return kmD3;
+}
+int introducere_kmD4(int kmD4)
+{
+	int kmI;
+	do
+	{
+		printf
+			("  \r\nPentru a merge mai departe intodu 0.  \r\n\r\n Introdu km in categoria D4 :");
+		scanf(" %d", &kmI);
+		kmD4 = kmI + kmD4;
+	}
+	while (kmI != 0);
+	return kmD4;
+}
+int introducere_kmW1(int kmW1)
+{
+	int kmI;
+	do
+	{
+		printf
+			("  \r\nPentru a merge mai departe intodu 0.  \r\n\r\n Introdu km in categoria W1 :");
+		scanf(" %d", &kmI);
+		kmW1 = kmI + kmW1;
+	}
+	while (kmI != 0);
+	return kmW1;
+}
+
+int introducere_kmW2(int kmW2)
+{
+	int kmI;
+	do
+	{
+		printf
+			("  \r\nPentru a merge mai departe intodu 0.  \r\n\r\n Introdu km in categoria W2 :");
+		scanf(" %d", &kmI);
+		kmW2 = kmI + kmW2;
+	}
+	while (kmI != 0);
+	return kmW2;
+}
+
+int introducere_kmU1(int kmU1)
+{
+	int kmI;
+	do
+	{
+		printf
+			("  \r\nPentru a merge mai departe intodu 0.  \r\n\r\n Introdu km in categoria U1 (Buc) :");
+		scanf(" %d", &kmI);
+		kmU1 = kmI + kmU1;
+	}
+	while (kmI != 0);
+	return kmU1;
+}
+
+int introducere_kmU2(int kmU2)
+{
+	int kmI;
+	do
+	{
+		printf
+			("  \r\nPentru a merge mai departe intodu 0.  \r\n\r\n Introdu km in categoria kmU2 (Municipi) :");
+		scanf(" %d", &kmI);
+		kmU2 = kmI + kmU2;
+	}
+	while (kmI != 0);
+	return kmU2;
+}
+
+int introducere_kmU3(int kmU3)
+{
+	int kmI;
+	do
+	{
+		printf
+			("  \r\nPentru a merge mai departe intodu 0.  \r\n\r\n Introdu km in categoria U3 ( Orase ) :");
+		scanf(" %d", &kmI);
+		kmU3 = kmI + kmU3;
+	}
+	while (kmI != 0);
+	return kmU3;
+}
+
+float date_speciale1()
+{
+
+	float coS;
+	
+	
+	printf("\r\n   Introduce date cu regim special Ex. :\r\n    Coeficient de iarna, coeficient de mers in coloana, etc. \r\n     Sub forma urmatoare '1.10' si apasa enrer ");
+            printf("\r\n\r\nPentru a mergemai departe introdu 0\r\n");
+	scanf(" %f", &coS);
+
+	return coS;
+}
+
+
+
+
+void sub_meniu()
+{
+	 printf("   \r\nIntrodu categoria sau T pentru toate ") ; 
+
+	printf("\r\n        Pentru D1 = A ");
+	printf("\r\n        Pentru D2 = B ");
+	printf("\r\n        Pentru D3 = C ");
+	printf("\r\n        Pentru D4 = D ");
+	printf("\r\n        Pentru W1 = E ");
+	printf("\r\n        Pentru W2 = F ");
+	printf("\r\n        Pentru U1 = G  ");
+	printf("\r\n        Pentru U2 = H  ");
+	printf("\r\n        Pentru U3 = I  ");
+	printf("\r\n        Toate     = T " );
+    printf("\r\n        Pentru a merege mai deparete X \r\n" );
+	return;
+}
+
+int introducere_alimentari(int alm)
+{
+	int almI = 0;
+
+	do
+	{
+		printf(" \r\n  Alimentari : ");
+		scanf(" %d", &almI);
+
+		alm = almI + alm;
+
+		printf("\r\n         Pebtru a merge mai departe apasa 0");
+
+	}
+	while (almI != 0);
+	return alm;
+}
